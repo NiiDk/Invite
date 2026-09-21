@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sandy 💘</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+
+      <div class="step active" data-step="1">
+        <div class="avatar">🥹👉🏾👈🏾</div>
+        <h1>Sandy, will you go on a date with me?</h1>
+        <p id="tease" class="tiny">Choose carefully 😌</p>
+
+        <div class="decision-area" id="decisionArea">
+          <button id="yesBtn" class="btn yes">YES 💘</button>
+          <button id="noBtn" class="btn no">NO 🙈</button>
+        </div>
+      </div>
+
+      <div class="step" data-step="2">
+        <div class="big">😭💘</div>
+        <h2>You actually said YES!</h2>
+        <p class="tiny">Okay Sandy, now let's plan it 😌</p>
+        <button class="btn yes full" data-next="3">LET'S GO ✨</button>
+      </div>
+
+      <div class="step" data-step="3">
+        <h2>When are you free?</h2>
+        <p class="tiny">Pick a day for me 👀</p>
+        <input id="dateInput" class="input" type="date">
+        <input id="timeInput" class="input" type="time">
+        <button class="btn yes full" id="dateNext">NEXT 💕</button>
+      </div>
+
+      <div class="step" data-step="4">
+        <h2>What are we eating?</h2>
+        <p class="tiny">This is serious business 😂</p>
+
+        <div class="grid" id="foodGrid">
+          <button class="choice" data-value="Jollof & Chicken">🍛<span>Jollof</span></button>
+          <button class="choice" data-value="Waakye">🥘<span>Waakye</span></button>
+          <button class="choice" data-value="Fufu & Soup">🍲<span>Fufu</span></button>
+          <button class="choice" data-value="Banku & Tilapia">🐟<span>Banku & Tilapia</span></button>
+          <button class="choice" data-value="Kelewele">🌶️<span>Kelewele</span></button>
+          <button class="choice" data-value="Pizza">🍕<span>Pizza</span></button>
+          <button class="choice" data-value="Burgers">🍔<span>Burgers</span></button>
+          <button class="choice" data-value="Surprise me">🎁<span>Surprise me</span></button>
+        </div>
+
+        <button class="btn yes full" id="foodNext">NEXT 💘</button>
+      </div>
+
+      <div class="step" data-step="5">
+        <h2>What kind of date?</h2>
+        <p class="tiny">Pick the vibe ✨</p>
+
+        <div class="grid" id="locationGrid">
+          <button class="choice" data-value="Restaurant">🍽️<span>Restaurant</span></button>
+          <button class="choice" data-value="Beach">🌊<span>Beach</span></button>
+          <button class="choice" data-value="Movies">🎬<span>Movies</span></button>
+          <button class="choice" data-value="Café">☕<span>Café</span></button>
+          <button class="choice" data-value="Lounge">🎶<span>Lounge</span></button>
+          <button class="choice" data-value="You choose">✨<span>You choose</span></button>
+        </div>
+
+        <input id="customLocation" class="input" placeholder="Or type somewhere...">
+        <button class="btn yes full" id="locationNext">DONE 😌</button>
+      </div>
+
+      <div class="step" data-step="6">
+        <div class="big">💘✨</div>
+        <h2>It's a date, Sandy!</h2>
+        <p class="tiny">Now I have to make it worth saying yes 😌</p>
+
+        <div class="summary">
+          <p id="summaryDate"></p>
+          <p id="summaryTime"></p>
+          <p id="summaryFood"></p>
+          <p id="summaryLocation"></p>
+        </div>
+
+        <button class="btn yes full" id="sendWhatsapp">SEND IT TO ME 💚</button>
+      </div>
+
+    </section>
+  </main>
+
+  <div id="confetti" class="confetti"></div>
+  <script src="script.js"></script>
+</body>
+</html>

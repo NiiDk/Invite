@@ -1,0 +1,32 @@
+*{box-sizing:border-box}
+:root{--pink:#ef5577;--pink2:#ff8fa5;--soft:#fff0f4;--text:#251b1e}
+html,body{margin:0;min-height:100%;font-family:Arial,Helvetica,sans-serif;background:#fff7f8;color:var(--text)}
+body{background:radial-gradient(circle at 20% 10%,#ffd9e2 0,transparent 28%),radial-gradient(circle at 80% 90%,#ffe8c5 0,transparent 24%),#fff7f8}
+.wrap{min-height:100vh;display:grid;place-items:center;padding:18px}
+.card{width:min(100%,480px);min-height:610px;background:#fff;border-radius:28px;padding:34px 22px;box-shadow:0 20px 60px rgba(117,53,71,.15);overflow:hidden}
+.step{display:none}
+.step.active{display:block;animation:pop .28s ease}
+@keyframes pop{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:none}}
+.avatar{width:145px;height:145px;border-radius:50%;margin:20px auto 28px;display:grid;place-items:center;background:var(--soft);font-size:58px;box-shadow:0 12px 30px rgba(239,85,119,.16)}
+h1,h2{text-align:center;line-height:1.12;margin:0 auto 12px}
+h1{font-size:clamp(2rem,8vw,3rem);max-width:430px}
+h2{font-size:clamp(1.8rem,7vw,2.5rem);margin-top:66px}
+.tiny{text-align:center;color:#7b676d;margin:8px 0 22px;font-size:.98rem}
+.big{text-align:center;font-size:70px;margin:65px 0 22px}
+.decision-area{position:relative;min-height:190px;margin-top:18px}
+.btn{min-height:54px;border:0;border-radius:16px;padding:14px 24px;font-weight:900;font-size:1rem;cursor:pointer}
+.yes{color:#fff;background:linear-gradient(135deg,var(--pink),var(--pink2));box-shadow:0 12px 26px rgba(239,85,119,.25)}
+.no{position:absolute;right:28px;top:0;background:#ffe7ed;color:#963d55}
+#yesBtn{position:absolute;left:28px;top:0}
+.full{display:block;width:100%;margin-top:22px}
+.input{width:100%;min-height:56px;border:1.5px solid #efd7de;border-radius:15px;margin:10px 0;padding:14px;font-size:1rem;outline:none}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:16px}
+.choice{border:1.5px solid #f1dbe1;border-radius:17px;min-height:88px;background:#fff;font-weight:800;font-size:1.6rem;cursor:pointer}
+.choice span{display:block;font-size:.9rem;margin-top:7px}
+.choice.selected{border-color:var(--pink);background:#fff0f4;transform:scale(1.02)}
+.summary{background:#fff4f6;border-radius:18px;padding:14px 18px;margin-top:12px}
+.summary p{margin:11px 0;font-weight:800}
+.confetti{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+.piece{position:absolute;top:-30px;animation:fall 2.6s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg)}}
+@media(max-width:420px){.card{min-height:630px;padding:28px 18px}.avatar{width:128px;height:128px}.no{right:16px}#yesBtn{left:16px}}
